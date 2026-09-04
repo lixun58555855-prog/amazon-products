@@ -218,13 +218,23 @@ async function loadProductsFromStorage() {
       applyFilterAndRender();
     });
   } else {
-    // GitHub Pages 或纯静态网页环境：优先从云端 products.json 获取实时商品列表
+    
+    // GitHub Pages 实时无缓存拉取商品库
     try {
       const timestamp = Date.now();
-      const res = await fetch("./products.json?t=" + timestamp);
-      if (res.ok) {
+      let res = null;
+      try {
+        // raw.githubusercontent.com 永远实时返回最新 Commit 数据
+        res = await fetch("https://raw.githubusercontent.com/lixun58555855-prog/amazon-products/main/products.json?nocache=" + timestamp);
+      } catch (e) {
+        res = null;
+      }
+      if (!res || !res.ok) {
+        res = await fetch("./products.json?t=" + timestamp);
+      }
+      if (res && res.ok) {
         const cloudData = await res.json();
-        if (Array.isArray(cloudData) && cloudData.length > 0) {
+        if (Array.isArray(cloudData)) {
           allProducts = cloudData;
           localStorage.setItem(STORAGE_KEY, JSON.stringify(allProducts));
           applyFilterAndRender();
@@ -232,7 +242,7 @@ async function loadProductsFromStorage() {
         }
       }
     } catch (err) {
-      console.warn("读取云端 products.json 失败，尝试降级到本地缓存", err);
+      console.warn("读取云端 products.json 失败", err);
     }
 
     try {
