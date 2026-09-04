@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>亚马逊产品库管理台</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- 顶部导航栏 -->
+    <header class="app-header">
+      <div class="brand-section">
+        <div class="logo-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand-title">亚马逊产品库</h1>
+          <p class="brand-subtitle">Amazon Product Keeper</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- 一键采集当前标签页 -->
+        <button id="btn-collect-current" class="btn btn-primary" title="提取当前正在浏览的亚马逊页面商品">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 5v14M5 12h14"></path>
+          </svg>
+          <span>采集当前页</span>
+        </button>
+
+        <!-- 导出 CSV -->
+        <button id="btn-export-csv" class="btn btn-secondary" title="导出为 Excel / CSV 电子表格">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>导出 CSV</span>
+        </button>
+
+        <!-- 全屏打开独立管理看板 -->
+        <button id="btn-open-dashboard" class="btn btn-icon" title="在新标签页全屏打开独立管理看板">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </button>
+
+        <!-- 清空所有产品 -->
+        <button id="btn-clear-all" class="btn btn-danger-ghost btn-icon" title="清空所有保存的商品">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="3 6 5 6 21 6"></polyline>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- 状态与数据统计栏 -->
+    <div class="stats-bar">
+      <div class="stat-pill">
+        <span class="stat-label">总收藏商品:</span>
+        <span id="stat-total-count" class="stat-value">0</span>
+      </div>
+      <div class="stat-pill">
+        <span class="stat-label">筛选结果:</span>
+        <span id="stat-filtered-count" class="stat-value">0</span>
+      </div>
+      <div class="spacer"></div>
+      <div class="view-toggle-group">
+        <button id="view-card" class="view-btn active" title="卡片网格视图">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </button>
+        <button id="view-table" class="view-btn" title="列表表格视图">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="8" y1="6" x2="21" y2="6"></line>
+            <line x1="8" y1="12" x2="21" y2="12"></line>
+            <line x1="8" y1="18" x2="21" y2="18"></line>
+            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 筛选搜索工具栏 -->
+    <div class="filter-toolbar">
+      <div class="search-box">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" placeholder="搜索标题、ASIN、品牌..." />
+        <button id="search-clear-btn" class="search-clear hidden" title="清除">✕</button>
+      </div>
+
+      <div class="filter-select-group">
+        <!-- 站点筛选 -->
+        <select id="filter-site" class="select-input">
+          <option value="ALL">全部站点</option>
+          <option value="US">🇺🇸 美国 (US)</option>
+          <option value="UK">🇬🇧 英国 (UK)</option>
+          <option value="DE">🇩🇪 德国 (DE)</option>
+          <option value="FR">🇫🇷 法国 (FR)</option>
+          <option value="JP">🇯🇵 日本 (JP)</option>
+          <option value="CA">🇨🇦 加拿大 (CA)</option>
+          <option value="IT">🇮🇹 意大利 (IT)</option>
+          <option value="ES">🇪🇸 西班牙 (ES)</option>
+          <option value="AU">🇦🇺 澳大利亚 (AU)</option>
+        </select>
+
+        <!-- 排序方式 -->
+        <select id="filter-sort" class="select-input">
+          <option value="time-desc">最新入库优先</option>
+          <option value="time-asc">最早入库优先</option>
+          <option value="price-desc">价格：高到低</option>
+          <option value="price-asc">价格：低到高</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 产品列表容器 -->
+    <main class="main-content">
+      <!-- 空状态 -->
+      <div id="empty-state" class="empty-state hidden">
+        <div class="empty-icon-wrap">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+        </div>
+        <h3 class="empty-title">产品库空空如也</h3>
+        <p class="empty-desc">在任意亚马逊商品详情页中，鼠标右键选择 <strong>“添加到本地产品库”</strong> 或点击页面右侧的悬浮按钮即可采集！</p>
+      </div>
+
+      <!-- 卡片网格视图 -->
+      <div id="product-grid" class="product-grid"></div>
+
+      <!-- 表格明细视图 -->
+      <div id="product-table-wrapper" class="product-table-wrapper hidden">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th width="50">图</th>
+              <th width="110">ASIN</th>
+              <th>商品标题</th>
+              <th width="80">站点</th>
+              <th width="100">售价</th>
+              <th width="120">采集时间</th>
+              <th width="90" style="text-align: center;">操作</th>
+            </tr>
+          </thead>
+          <tbody id="product-table-body"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <!-- 底部状态指示 -->
+    <footer class="app-footer">
+      <span>已启用本地持久化存储 (chrome.storage.local) · 支持离线查看</span>
+    </footer>
+  </div>
+
+  <!-- 自定义确认弹窗 (Modal) -->
+  <div id="modal-confirm" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title">操作确认</h3>
+      </div>
+      <p id="modal-desc" class="modal-desc">您确定要执行该操作吗？</p>
+      <div class="modal-actions">
+        <button id="modal-cancel-btn" class="btn btn-secondary">取消</button>
+        <button id="modal-confirm-btn" class="btn btn-danger">确认清空</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 全局轻量通知浮层 -->
+  <div id="popup-toast" class="popup-toast hidden"></div>
+
+  <script src="app.js"></script>
+
+  <!-- GitHub 云端同步设置 Modal -->
+  <div id="modal-github" class="modal-overlay hidden">
+    <div class="modal-box modal-github-box">
+      <div class="modal-header">
+        <h3 style="display: flex; align-items: center; gap: 8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+          </svg>
+          GitHub 云端同步配置
+        </h3>
+        <button id="modal-gh-close" class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-tip">绑定 GitHub 仓库后，每次采集都会自动将商品库同步推送到 GitHub 云端，手机/平板随时打开 GitHub Pages 访问！</p>
+        
+        <div class="form-group">
+          <label for="gh-repo">GitHub 仓库 (格式: 用户名/仓库名):</label>
+          <input type="text" id="gh-repo" class="form-input" placeholder="例如: yourname/amazon-products" />
+        </div>
+
+        <div class="form-group">
+          <label for="gh-token">GitHub Token (Personal Access Token):</label>
+          <input type="password" id="gh-token" class="form-input" placeholder="ghp_xxxxxxxxxxxx" />
+          <small class="form-help">需要 contents 写入权限。可在 GitHub -> Settings -> Developer settings -> Personal access tokens (classic) 生成。</small>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group" style="flex: 1;">
+            <label for="gh-branch">分支 (Branch):</label>
+            <input type="text" id="gh-branch" class="form-input" value="main" />
+          </div>
+          <div class="form-group" style="flex: 1;">
+            <label for="gh-path">数据存储文件名:</label>
+            <input type="text" id="gh-path" class="form-input" value="products.json" />
+          </div>
+        </div>
+
+        <div class="form-checkbox">
+          <label style="display: flex; align-items: center; gap: 6px; cursor: pointer;">
+            <input type="checkbox" id="gh-auto-sync" checked />
+            <span>每次采集商品时，自动推送到 GitHub 云端</span>
+          </label>
+        </div>
+
+        <div id="gh-sync-status" class="sync-status-msg hidden"></div>
+      </div>
+
+      <div class="modal-actions" style="justify-content: space-between;">
+        <div>
+          <button id="btn-gh-push-now" class="btn-secondary" style="color: var(--amazon-orange);">☁️ 立即推送所有商品到 GitHub</button>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button id="btn-gh-save" class="btn-primary">保存配置</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 11px; color: var(--text-dim);">云端在线访问链接:</span>
+        <a id="gh-pages-link" href="#" target="_blank" style="font-size: 12px; color: var(--amazon-orange); text-decoration: none;">尚未配置仓库</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
