@@ -1,5 +1,29 @@
 [
   {
+    "asin": "B0CCZ1SQ8G",
+    "brand": "Bose",
+    "collectedAt": "2026/9/5 02:42:12",
+    "createdAt": 1788547332199,
+    "currency": "$",
+    "hostname": "www.amazon.com",
+    "mainImage": "https://m.media-amazon.com/images/I/51y5xR-XcfL._AC_SL1500_.jpg",
+    "numericPrice": 229,
+    "price": "$229.00",
+    "priceHistory": [
+      {
+        "price": "$229.00",
+        "timestamp": 1788547332199
+      }
+    ],
+    "rating": "4.5",
+    "rawUrl": "https://www.amazon.com/Bose-QuietComfort-Cancelling-Headphones-Bluetooth/dp/B0CCZ1SQ8G?ref=dlx_labor_dg_dcl_B0CCZ1SQ8G_dt_sl14_08_pi&pf_rd_r=FKQV8PHH4RBEQY9K8V8Y&pf_rd_p=d86ac96d-fbe6-47aa-a423-8956ff9eab08&sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D&th=1",
+    "reviews": "21,680",
+    "site": "US",
+    "title": "Bose QuietComfort Bluetooth Headphones, Wireless Headphones with Active Over Ear Noise Cancelling and Mic, Deep Bass, Up to 24 Hours of Playtime, Cypress Green - Limited Edition",
+    "updatedAt": 1788547332199,
+    "url": "https://www.amazon.com/dp/B0CCZ1SQ8G"
+  },
+  {
     "asin": "B07QW1GH8Q",
     "brand": "Amazon Grocery Store",
     "collectedAt": "2026/9/5 02:39:30",
