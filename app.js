@@ -211,21 +211,36 @@ function bindEvents() {
 /**
  * 从本地 storage 加载商品数据（自动适配 Chrome 扩展与浏览器独立预览）
  */
-function loadProductsFromStorage() {
+async function loadProductsFromStorage() {
   if (isChromeExtension) {
     chrome.storage.local.get([STORAGE_KEY], (res) => {
       allProducts = res[STORAGE_KEY] || [];
       applyFilterAndRender();
     });
   } else {
-    // 纯网页环境使用 localStorage，首次打开注入精美示例数据
+    // GitHub Pages 或纯静态网页环境：优先从云端 products.json 获取实时商品列表
+    try {
+      const timestamp = Date.now();
+      const res = await fetch("./products.json?t=" + timestamp);
+      if (res.ok) {
+        const cloudData = await res.json();
+        if (Array.isArray(cloudData) && cloudData.length > 0) {
+          allProducts = cloudData;
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(allProducts));
+          applyFilterAndRender();
+          return;
+        }
+      }
+    } catch (err) {
+      console.warn("读取云端 products.json 失败，尝试降级到本地缓存", err);
+    }
+
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored) {
         allProducts = JSON.parse(stored);
       } else {
         allProducts = [...MOCK_PREVIEW_PRODUCTS];
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(allProducts));
       }
     } catch (e) {
       allProducts = [...MOCK_PREVIEW_PRODUCTS];
