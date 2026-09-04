@@ -1,5 +1,29 @@
 [
   {
+    "asin": "B0FX9TSFFS",
+    "brand": "ioion Store",
+    "collectedAt": "2026/9/5 02:34:59",
+    "createdAt": 1788546899433,
+    "currency": "$",
+    "hostname": "www.amazon.com",
+    "mainImage": "https://m.media-amazon.com/images/I/71XZpy-lT4L._AC_SL1500_.jpg",
+    "numericPrice": 24.98,
+    "price": "$24.98",
+    "priceHistory": [
+      {
+        "price": "$24.98",
+        "timestamp": 1788546899433
+      }
+    ],
+    "rating": "4.7",
+    "rawUrl": "https://www.amazon.com/Automatic-Adjustable-Coarseness-Appliances-Battery-Stainless/dp/B0FX9TSFFS/?_encoding=UTF8&pd_rd_w=Lw55y&content-id=amzn1.sym.dc00deee-08b8-45e7-8f9d-751dabeea892%3Aamzn1.symc.550d5e79-2334-41cf-b277-eb4928a016b9&pf_rd_p=dc00deee-08b8-45e7-8f9d-751dabeea892&pf_rd_r=GNX1A31PRX0W50WG2ARP&pd_rd_wg=xqJaS&pd_rd_r=8877175e-b580-464a-9019-12d49e153364&ref_=pd_hp_d_r_btf_ci_mcx_mr_hp_m&th=1",
+    "reviews": "373",
+    "site": "US",
+    "title": "Electric Salt and Pepper Grinder Set, Battery Automatic Salt and Pepper Shaker with Adjustable Coarseness, Large Capacity Pepper Mill with LED Kitchen Appliances(Battery-Stainless Steel)",
+    "updatedAt": 1788546899433,
+    "url": "https://www.amazon.com/dp/B0FX9TSFFS"
+  },
+  {
     "asin": "B0GG32R9J2",
     "brand": "KHayRovies Store",
     "collectedAt": "2026/9/5 02:22:46",
