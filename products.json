@@ -1,70 +1,134 @@
 [
   {
-    "asin": "B08N5WRWNW",
-    "title": "Apple 2020 MacBook Air Laptop M1 Chip, 13” Retina Display, 8GB RAM, 256GB SSD Storage",
-    "mainImage": "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SL1500_.jpg",
-    "price": "$749.99",
-    "numericPrice": 749.99,
+    "asin": "B0GG32R9J2",
+    "brand": "KHayRovies Store",
+    "collectedAt": "2026/9/5 02:22:46",
+    "createdAt": 1788546166202,
     "currency": "$",
-    "site": "US",
     "hostname": "www.amazon.com",
-    "url": "https://www.amazon.com/dp/B08N5WRWNW",
-    "rating": "4.8",
-    "reviews": "21,450",
-    "brand": "Apple",
-    "collectedAt": "2026/9/5 10:15:20",
-    "createdAt": 1788536570172,
-    "updatedAt": 1788536570172
+    "mainImage": "https://m.media-amazon.com/images/I/811nu5EBmNL._AC_SL1500_.jpg",
+    "numericPrice": 18.99,
+    "price": "$18.99",
+    "priceHistory": [
+      {
+        "price": "$18.99",
+        "timestamp": 1788546166202
+      }
+    ],
+    "rating": "4.2",
+    "rawUrl": "https://www.amazon.com/dp/B0GG32R9J2/ref=sspa_dk_detail_5?pd_rd_i=B0GG32R9J2&pd_rd_w=WhQZ6&content-id=amzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6&pf_rd_p=3bc66c0a-cc61-4816-aa2d-e53327eaddb6&pf_rd_r=4647S3TAPZK8CVMK5M8P&pd_rd_wg=KzUex&pd_rd_r=061b4888-f728-4746-837d-2bd39e5e3baa&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1",
+    "reviews": "140",
+    "site": "US",
+    "title": "4 Pack Bird Bath for Outside, Birdbath & Feeder Bowl with Metal Stakes",
+    "updatedAt": 1788546166202,
+    "url": "https://www.amazon.com/dp/B0GG32R9J2"
   },
   {
-    "asin": "B09B8V1LZ3",
-    "title": "Sony WH-1000XM5 Wireless Industry Leading Noise Canceling Headphones with Auto NC Optimizer",
-    "mainImage": "https://m.media-amazon.com/images/I/61+El0CuctL._AC_SL1500_.jpg",
-    "price": "$398.00",
-    "numericPrice": 398,
+    "asin": "B0FY2GY5WK",
+    "brand": "TUSPEU Store",
+    "collectedAt": "2026/9/5 02:07:34",
+    "createdAt": 1788545254155,
     "currency": "$",
-    "site": "US",
     "hostname": "www.amazon.com",
-    "url": "https://www.amazon.com/dp/B09B8V1LZ3",
+    "mainImage": "https://m.media-amazon.com/images/I/61-c8arM3vL._AC_SL1500_.jpg",
+    "numericPrice": 13.99,
+    "price": "$13.99",
+    "priceHistory": [
+      {
+        "price": "$13.99",
+        "timestamp": 1788545254155
+      }
+    ],
+    "rating": "4.0",
+    "rawUrl": "https://www.amazon.com/dp/B0FY2GY5WK/ref=sspa_dk_detail_3?pd_rd_i=B0FY2GY5WK&pd_rd_w=WhQZ6&content-id=amzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6&pf_rd_p=3bc66c0a-cc61-4816-aa2d-e53327eaddb6&pf_rd_r=4647S3TAPZK8CVMK5M8P&pd_rd_wg=KzUex&pd_rd_r=061b4888-f728-4746-837d-2bd39e5e3baa&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1",
+    "reviews": "78",
+    "site": "US",
+    "title": "Bird Bath for Outside, 40In Freestanding Birdbaths & Feeder, Brown",
+    "updatedAt": 1788545254155,
+    "url": "https://www.amazon.com/dp/B0FY2GY5WK"
+  },
+  {
+    "asin": "B0H4VL2QLW",
+    "brand": "Azomabox Store",
+    "collectedAt": "2026/9/5 02:05:48",
+    "createdAt": 1788545057289,
+    "currency": "$",
+    "hostname": "www.amazon.com",
+    "mainImage": "https://m.media-amazon.com/images/I/71NcALoRbnL._AC_SL1500_.jpg",
+    "numericPrice": 11.99,
+    "price": "$11.99",
+    "priceHistory": [
+      {
+        "price": "$11.99",
+        "timestamp": 1788545057289
+      },
+      {
+        "price": "$11.99",
+        "timestamp": 1788545128308
+      },
+      {
+        "price": "$11.99",
+        "timestamp": 1788545148459
+      }
+    ],
     "rating": "4.6",
-    "reviews": "12,830",
-    "brand": "Sony",
-    "collectedAt": "2026/9/5 11:30:00",
-    "createdAt": 1788525770172,
-    "updatedAt": 1788525770172
+    "rawUrl": "https://www.amazon.com/Azomabox-Copper-Disc-99-9-Cardinal/dp/B0H4VL2QLW/?_encoding=UTF8&pd_rd_w=Zunl1&content-id=amzn1.sym.c6b3f3de-512a-4829-b27f-3b799e2c9106&pf_rd_p=c6b3f3de-512a-4829-b27f-3b799e2c9106&pf_rd_r=5GF36TH2HDX4JCJ7BIRK&pd_rd_wg=Ckygs&pd_rd_r=76572221-7268-47e8-97a6-1e534e559d42&ref_=pd_hp_d_r_btf_dealz_dotda",
+    "reviews": "921",
+    "site": "US",
+    "title": "Copper Disc for Bird Bath, 99.9% Pure Copper (Cardinal)",
+    "updatedAt": 1788545148459,
+    "url": "https://www.amazon.com/dp/B0H4VL2QLW"
   },
   {
-    "asin": "B07FZ8S74R",
-    "title": "Echo Dot (4th Gen) | Smart speaker with Alexa | Charcoal",
-    "mainImage": "https://m.media-amazon.com/images/I/714Rq4k05UL._AC_SL1000_.jpg",
-    "price": "£44.99",
-    "numericPrice": 44.99,
-    "currency": "£",
-    "site": "UK",
-    "hostname": "www.amazon.co.uk",
-    "url": "https://www.amazon.co.uk/dp/B07FZ8S74R",
-    "rating": "4.7",
-    "reviews": "89,120",
-    "brand": "Amazon",
-    "collectedAt": "2026/9/5 12:45:10",
-    "createdAt": 1788500570172,
-    "updatedAt": 1788500570172
+    "asin": "B0FGXXMYSP",
+    "brand": "PuzzOne Store",
+    "collectedAt": "2026/9/5 01:47:08",
+    "createdAt": 1788544028522,
+    "currency": "$",
+    "hostname": "www.amazon.com",
+    "mainImage": "https://m.media-amazon.com/images/I/81xckpLTuRL._AC_SL1500_.jpg",
+    "numericPrice": 7.99,
+    "price": "$7.99",
+    "priceHistory": [
+      {
+        "price": "$7.99",
+        "timestamp": 1788544028522
+      }
+    ],
+    "rating": "4.6",
+    "rawUrl": "https://www.amazon.com/Colorful-Pebbles-Coastal-Challenging-1000-Piece/dp/B0FGXXMYSP/ref=zg_bs_g_166363011_d_sccl_10/142-7513656-1309223?th=1",
+    "reviews": "489",
+    "site": "US",
+    "title": "Beach Sunset Heart Jigsaw Puzzle 1000 Pieces for Adults Colorful Pebbles Coastal Scene Challenging Puzzle Games Premium 1000-Piece Puzzle for Game Night or Gift",
+    "updatedAt": 1788544028522,
+    "url": "https://www.amazon.com/dp/B0FGXXMYSP"
   },
   {
-    "asin": "B09TMN58KL",
-    "title": "Kindle Paperwhite (16 GB) – Now with a 6.8\" display and adjustable warm light",
-    "mainImage": "https://m.media-amazon.com/images/I/61WfQ1CgSFL._AC_SL1000_.jpg",
-    "price": "¥16,980",
-    "numericPrice": 16980,
-    "currency": "¥",
-    "site": "JP",
-    "hostname": "www.amazon.co.jp",
-    "url": "https://www.amazon.co.jp/dp/B09TMN58KL",
-    "rating": "4.5",
-    "reviews": "6,520",
-    "brand": "Amazon",
-    "collectedAt": "2026/9/5 14:02:18",
-    "createdAt": 1788471770172,
-    "updatedAt": 1788471770172
+    "asin": "B0CKVYT3R3",
+    "brand": "CMY Cubes Store",
+    "collectedAt": "2026/9/5 01:46:42",
+    "createdAt": 1788543652399,
+    "currency": "$",
+    "hostname": "www.amazon.com",
+    "mainImage": "https://m.media-amazon.com/images/I/61Wp9S7HTcL._AC_SL1024_.jpg",
+    "numericPrice": 56.95,
+    "price": "$56.95",
+    "priceHistory": [
+      {
+        "price": "$56.95",
+        "timestamp": 1788543652399
+      },
+      {
+        "price": "$56.95",
+        "timestamp": 1788544002291
+      }
+    ],
+    "rating": "4.3",
+    "rawUrl": "https://www.amazon.com/500-Pieces-Round-Jigsaw-Puzzles/dp/B0CKVYT3R3/ref=sr_1_1?crid=220Z7IL1DRBJ&dib=eyJ2IjoiMSJ9.Zl6uIvbYSKTVYqtdoLdXKD-pQwquRz295EA-J5940VrSQG1TwYBFKlH_xf94oin507zUaxbOOV7i3PbW6c1PW4f2eT4urxclQd8Y8ukTMLKTQ6x2G3DPvUG0e2aBSEYHfubhuNAg7POUg28TvFj-lJHZZ8TAHtUtdEzhDd6FxNwbMM6jQ4sNSWbo5SvaGd14_8vrOpwg0Lo21p1P9Cm0tPzKu8hdGQSlEnRUZJBCuOVzhPBHuRvpiOUbko6JF94sQVrxUm7fWTkLImjjfFahAAbZQhbOpjNY9JgRlP7fxzU.55ejePCQycWjQmxjp-uYAyG2_6obZnb_5lbRRVD15UQ&dib_tag=se&keywords=500+Pieces+Round+Jigsaw+Puzzles+-+CM+Cubes+-+Rainbow+Palette+-+Color+Wheel+Changing+Puzzle+-+Difficult+%26+Challenging+Intellectual+Game+for+Adults+%26+Teens+-+Lenticular+Color+Altering+Puzzle+Magic%21&nsdOptOutParam=true&qid=1788538605&sprefix=b0ckvyt3r3%2Caps%2C1099&sr=8-1",
+    "reviews": "42",
+    "site": "US",
+    "title": "500 Pieces Round Jigsaw Puzzles - CMY Cubes - Rainbow Palette - Color Wheel Changing Puzzle - Difficult & Challenging Intellectual Game for Adults & Teens - Lenticular Color Altering Puzzle Magic!",
+    "updatedAt": 1788544002291,
+    "url": "https://www.amazon.com/dp/B0CKVYT3R3"
   }
 ]
